@@ -2,11 +2,6 @@ html {
 	background: none;
 }
 
-@font-face {
-    font-family: NafeesWeb;
-    src: url(http://opensource.com.pk/NafeesWeb.ttf);
-}
-
 body {
 	background-repeat: repeat-x;
 	color: rgb(34, 34, 34);
@@ -135,7 +130,15 @@ h4 {
 	clear: both;
 	width: 900px;
 }
-
+.form_wrapper .item_groupbelow {
+    clear: both;
+    margin-left: 120px;
+}
+.form_wrapper .item_groupbelow .item {
+	width: 354px;
+	margin-right: 10px;
+	clear: none;
+}
 .form_wrapper .item_group .item {
 	width: 284px;
 	margin-right: 10px;

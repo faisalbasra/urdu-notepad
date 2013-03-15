@@ -16,9 +16,9 @@ $config['site_name'] = 'Urdu Notepad';
  *
 */
 $config['db_hostname'] = 'localhost';
-$config['db_database'] = 'your_database';
-$config['db_username'] = 'your_database_username';
-$config['db_password'] = 'your_database_password';
+$config['db_database'] = 'urdu';
+$config['db_username'] = 'root';
+$config['db_password'] = '';
 
 /**
  * Combine JS & CSS files

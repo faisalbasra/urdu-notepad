@@ -46,15 +46,15 @@
 		
 		<div class="item">
 			<label for="paste" dir="rtl" style="float:right;">تحریر
-				<span class="instruction" style="width: 500px !important;color:#333;">Hint: Type "<span style="color:red;">Amjad, kya tmhara dmagh tou nhin kharab?</span>" and press space </span>
+				<span class="instruction" style="width: 800px !important;color: rgb(51, 51, 51);font-size: 15px;margin-right: 20px;">Hint: Type "<span style="color:red;">Amjad, kya tmhara dmagh tou nhin kharab?</span>" and press space / Wait for the page to load completely before writing.</span>
                 <span class="instruction"><a href="#" id="enable_codemirror"></a></span>
 			</label>
 			
 			<textarea id="code" name="code" cols="40" rows="7" tabindex="4" lang="ur" dir="rtl"><?php if(isset($paste_set)){ echo $paste_set; }?></textarea>
 		</div>																											
 		
-		<div class="item_group">
-			<div class="item">
+		<div class="item_groupbelow">
+<!--			<div class="item">
 				<label for="snipurl">چھوٹا یو آر ایل
 					<span class="instruction"></span>
 				</label>
@@ -64,7 +64,7 @@
 						echo form_checkbox($set);
 					?>
 				</div>
-			</div>
+			</div> -->
 		
 			<div class="item">
 				<label for="private">پوشیدہ

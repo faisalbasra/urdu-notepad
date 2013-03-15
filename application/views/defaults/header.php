@@ -18,49 +18,13 @@ $page_title .= $this->config->item('site_name');
     <meta property="fb:app_id" content="459117500798602" />
     <meta property="og:title" content="<?php echo $title; ?>" />
     <meta property="og:description" content=" مصنف - <?php echo $name; ?> - Read, write Urdu at UrduNotepad.com" />
-    <meta property="og:image" content="http://opensource.com.pk/urdunotepad-logo.png"/>
+    <meta property="og:image" content="<?php echo base_url(); ?>static/images/logo.png"/>
 <meta name="google-site-verification" content="heZP7OQp99uSlU-I7jFecsJtJm7RJvlFN1Un-tK24vs" />
 <META NAME="Description" CONTENT="<?php echo $title; ?> - <?php echo $name; ?> | Urdu Notepad - Read, Write Urdu Online. Best online Urdu typing tool. Write Urdu on the web. Urdu text unicode writing. Write and save text online. ">
 <META NAME="Title" CONTENT="<?php echo $page_title; ?>">
         <title><?php echo $page_title; ?></title>
 
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
 
-      // Load the Google Transliterate API
-      google.load("elements", "1", {
-            packages: "transliteration"
-          });
-
-      function onLoad() {
-        var options = {
-            sourceLanguage:
-                google.elements.transliteration.LanguageCode.ENGLISH,
-            destinationLanguage:
-                [google.elements.transliteration.LanguageCode.URDU],
-            shortcutKey: 'ctrl+g',
-            transliterationEnabled: true
-        };
-
-        // Create an instance on TransliterationControl with the required
-        // options.
-        var control =
-            new google.elements.transliteration.TransliterationControl(options);
-
-        // Enable transliteration in the textbox with id
-        // 'transliterateTextarea'.
-
-    control.makeTransliteratable(['gsc-i-id1']);
-        control.makeTransliteratable(['code']);
-    control.makeTransliteratable(['title']);
-    control.makeTransliteratable(['name']);
-    control.makeTransliteratable(['u_0_8']);
-    control.makeTransliteratable(['nicEdit-main']);  
-      }
-      google.setOnLoadCallback(onLoad);
-
-
-    </script>
 <?php
 
 //Carabiner
@@ -87,7 +51,7 @@ $this->carabiner->display('css');
 <style>
 @font-face {
     font-family: NafeesWeb;
-    src: url(http://urdunotepad.com/static/fonts/NafeesWeb.ttf);
+    src: url(<?php echo base_url(); ?>static/fonts/NafeesWeb.ttf);
 }
     textarea#code
            {font-family:"Jameel Noori Nastaleeq",NafeesWeb !important;font-size:1.4em !important;}
@@ -124,7 +88,6 @@ cse .gs-result .gs-snippet, .gs-result .gs-snippet, .cse .gs-spelling-original, 
     text-align: right;
 }
 </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
     //<![CDATA[
     var base_url = '<?php echo base_url(); ?>';
@@ -136,7 +99,7 @@ cse .gs-result .gs-snippet, .gs-result .gs-snippet, .cse .gs-spelling-original, 
         <div id="container">
             <div class="container">         
                 <div class="header">
-                    <h1><a href="<?php echo base_url(); ?>" class="title" style="font-family:Jameel Norri Nastaleeq,NafeesWeb;">Urdu Notepad</a></h1>
+                    <h1><a href="<?php echo base_url(); ?>" class="title" style="font-family:Verdana;font-weight:300;">Urdu Notepad</a></h1>
                     <ul class="tabs">
                         <?php $l = $this->uri->segment(1)?>
                         <?php if(! $this->config->item('private_only')){ ?>

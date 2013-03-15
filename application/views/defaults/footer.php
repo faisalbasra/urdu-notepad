@@ -21,23 +21,43 @@ $this->carabiner->js('codemirror_exec.js');
 $this->carabiner->display('js');
 
 ?>
-<script id="_webengage_script_tag" type="text/javascript">
-  window.webengageWidgetInit = window.webengageWidgetInit || function(){
-    webengage.init({
-      licenseCode:"~47b6671a"
-    }).onReady(function(){
-      webengage.render();
-    });
-  };
+<!--Google transliterate-->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
 
-  (function(d){
-    var _we = d.createElement('script');
-    _we.type = 'text/javascript';
-    _we.async = true;
-    _we.src = (d.location.protocol == 'https:' ? "//ssl.widgets.webengage.com" : "//cdn.widgets.webengage.com") + "/js/widget/webengage-min-v-3.0.js";
-    var _sNode = d.getElementById('_webengage_script_tag');
-    _sNode.parentNode.insertBefore(_we, _sNode);
-  })(document);
-</script>
+      // Load the Google Transliterate API
+      google.load("elements", "1", {
+            packages: "transliteration"
+          });
+
+      function onLoad() {
+        var options = {
+            sourceLanguage:
+                google.elements.transliteration.LanguageCode.ENGLISH,
+            destinationLanguage:
+                [google.elements.transliteration.LanguageCode.URDU],
+            shortcutKey: 'ctrl+g',
+            transliterationEnabled: true
+        };
+
+        // Create an instance on TransliterationControl with the required
+        // options.
+        var control =
+            new google.elements.transliteration.TransliterationControl(options);
+
+        // Enable transliteration in the textbox with id
+        // 'transliterateTextarea'.
+
+    control.makeTransliteratable(['gsc-i-id1']);
+        control.makeTransliteratable(['code']);
+    control.makeTransliteratable(['title']);
+    control.makeTransliteratable(['name']);
+    control.makeTransliteratable(['u_0_8']);
+    control.makeTransliteratable(['nicEdit-main']);  
+      }
+      google.setOnLoadCallback(onLoad);
+
+
+    </script>
 	</body>
 </html>
